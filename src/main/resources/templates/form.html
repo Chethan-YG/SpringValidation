@@ -7,7 +7,6 @@
 <title>Login</title>
 <style>
 h1, label {
-	color: white;
 	font-family: cursive;
 }
 
@@ -18,10 +17,6 @@ body {
 	background-attachment: fixed;
 }
 
-form {
-	background: inherit;
-	backdrop-filter: blur(8px);
-}
 </style>
 </head>
 <body>
@@ -31,11 +26,11 @@ form {
 			<div class="col-md-6 offset-md-3">
 
 				<form th:action="@{/submit}" method="post" th:object="${loginData}"
-					class="p-4 rounded shadow-lg">
+					class="p-4 rounded shadow-lg bg-white">
 					<h1 class="text-center login-title mb-4">Login Here</h1>
 					<div class="mb-3">
 						<label for="exampleInputuserName1" class="form-label">Username</label>
-						<input type="text" class="form-control" name="userName"
+						<input type="text" class="form-control border" name="userName"
 							th:value="${loginData.userName}"
 							th:classappend="${#fields.hasErrors('userName')? 'is-invalid':''}"
 							id="exampleInputuserName1">
@@ -44,7 +39,7 @@ form {
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label">Email
-							address</label> <input type="email" class="form-control" name="email"
+							address</label> <input type="email" class="form-control border" name="email"
 							th:value="${loginData.email}"
 							th:classappend="${#fields.hasErrors('email') ? 'is-invalid':''}"
 							id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -53,7 +48,7 @@ form {
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">Password</label>
-						<input type="password" class="form-control" name="password"
+						<input type="password" class="form-control border" name="password"
 							th:value="${loginData.password}"
 							th:classappend="${#fields.hasErrors('password') ? 'is-invalid':''}"
 							id="exampleInputPassword1">
@@ -63,14 +58,14 @@ form {
 					<div class="mb-3 form-check">
 						<input type="checkbox" name="agreed"
 							th:classappend="${#fields.hasErrors('agreed')? 'is-invalid':''}"
-							class="form-check-input" id="exampleCheck1"> <label
+							class="form-check-input  border-1" id="exampleCheck1"> <label
 							class="form-check-label" for="exampleCheck1">Agree terms
 							and Conditions</label>
 						<div th:each="e : ${#fields.errors('agreed')}" th:text="${e}"
 							class="invalid-feedback"></div>
 					</div>
 					<div class="container text-center">
-						<button type="submit" class="btn bg-white fw-bold px-5">SUBMIT</button>
+						<button type="submit" class="btn btn-primary fw-bold px-5">SUBMIT</button>
 					</div>
 				</form>
 

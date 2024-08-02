@@ -40,36 +40,3 @@ The form includes fields for username, email, password, and agreement to terms a
 
 2. Open a web browser and navigate to:
     http://localhost:8080/form
-
-## Project Structure
-
-spring-boot-validation
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── springboot
-│   │   │           └── validation
-│   │   │               ├── controller
-│   │   │               │   └── MyController.java
-│   │   │               └── entities
-│   │   │                   └── LoginData.java
-│   │   ├── resources
-│   │   │   ├── static
-│   │   │   │   └── images
-│   │   │   │       └── background.jpg
-│   │   │   ├── templates
-│   │   │   │   ├── form.html
-│   │   │   │   └── success.html
-│   │   │   └── application.properties
-│   └── test
-│       └── java
-│           └── com
-│               └── springboot
-│                   └── validation
-│                       └── ValidationApplicationTests.java
-├── .gitignore
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-└── README.md
